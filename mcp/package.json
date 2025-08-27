@@ -1,0 +1,16 @@
+{
+  "name": "mcp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "@types/aws-lambda": "^8.10.152"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7"
+  }
+}
