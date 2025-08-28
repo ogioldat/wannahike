@@ -32,29 +32,6 @@ const server = new FastMCP({
 });
 
 server.addTool({
-  name: "add_numbers",
-  description: "Add two numbers",
-  parameters: z.object({
-    num_1: z.number().describe("First number"),
-    num_2: z.number().describe("Second number"),
-  }),
-  execute: async (args) => {
-    return String(args.num_1 + args.num_2);
-  },
-});
-
-server.addResource({
-  uri: "file://hikes.csv",
-  name: "Hikes List",
-  mimeType: "text/csv",
-  async load() {
-    const content = await readFile("data/tatra_hikes.csv", "utf-8");
-    const records = parse(content, { columns: true });
-    return { text: JSON.stringify(records) };
-  },
-});
-
-server.addTool({
   name: "list_hikes",
   description: "List all hikes",
   async execute() {
@@ -62,8 +39,8 @@ server.addTool({
     const records = parse(content, { columns: true }) as {
       trail_name: string;
     }[];
-    const names = records.map((record) => record.trail_name);
-    return names.join(",\n");
+
+    return JSON.stringify(records);
   },
 });
 
@@ -71,6 +48,7 @@ server.addTool({
   name: "get_weather_forecast",
   description: "Get weather forecast",
   parameters: z.object({
+    hike_date: z.date().describe("Date of the hike"),
   }),
   async execute() {
     const forecast = await getWeatherForecast("Zakopane, PL");
