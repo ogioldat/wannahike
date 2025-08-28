@@ -29,7 +29,7 @@ export async function getWeatherForecast(location: string): Promise<WeatherForec
     throw new Error(`Weather API error: ${response.statusText}`);
   }
 
-  const data = await response.json();
+  const data: any = await response.json();
   const warnings = [];
 
   // Temperature warnings

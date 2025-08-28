@@ -48,7 +48,6 @@ server.addTool({
   name: "get_weather_forecast",
   description: "Get weather forecast",
   parameters: z.object({
-    hike_date: z.date().describe("Date of the hike"),
   }),
   async execute() {
     const forecast = await getWeatherForecast("Zakopane, PL");

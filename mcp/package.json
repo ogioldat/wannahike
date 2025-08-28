@@ -4,13 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "esbuild src/server.ts --bundle --platform=node --format=esm --packages=external --outfile=dist/server.js",
     "start": "node dist/server.js",
     "zip": "rm -f lambda.zip && zip -rq lambda.zip dist package.json run.sh node_modules data/tatra_hikes.csv"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.152",
     "@types/node": "^24.3.0",
+    "esbuild": "0.25.9",
     "typescript": "~5.8.3"
   },
   "dependencies": {
