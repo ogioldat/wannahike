@@ -8,6 +8,12 @@ dependencies:
   aws-lambda:
     specifier: ^1.0.7
     version: 1.0.7
+  csv-parse:
+    specifier: ^6.1.0
+    version: 6.1.0
+  dotenv:
+    specifier: ^17.2.1
+    version: 17.2.1
   fastmcp:
     specifier: ^3.15.1
     version: 3.15.1
@@ -269,6 +275,10 @@ packages:
       which: 2.0.2
     dev: false
 
+  /csv-parse@6.1.0:
+    resolution: {integrity: sha512-CEE+jwpgLn+MmtCpVcPtiCZpVtB6Z2OKPTr34pycYYoL7sxdOkXDdQ4lRiw6ioC0q6BLqhc6cKweCVvral8yhw==}
+    dev: false
+
   /debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
     engines: {node: '>=6.0'}
@@ -293,6 +303,11 @@ packages:
   /depd@2.0.0:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
+    dev: false
+
+  /dotenv@17.2.1:
+    resolution: {integrity: sha512-kQhDYKZecqnM0fCnzI5eIv5L4cAe/iRI+HqMbO/hbRdTAeXDG+M9FjipUxNfbARuEg4iHIbhnhs78BCHNbSxEQ==}
+    engines: {node: '>=12'}
     dev: false
 
   /dunder-proto@1.0.1:
