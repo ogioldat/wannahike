@@ -1,0 +1,76 @@
+{
+  "agent_id": "",
+  "channel": "voice",
+  "last_modification_timestamp": 1756404979864,
+  "agent_name": "Multi-State Agent",
+  "response_engine": {
+    "type": "retell-llm",
+    "llm_id": "llm_73cba75cfb0bd52fc7316b9e01b4",
+    "version": 0
+  },
+  "language": "pl-PL",
+  "opt_out_sensitive_data_storage": false,
+  "data_storage_setting": "everything",
+  "opt_in_signed_url": false,
+  "version": 0,
+  "is_published": false,
+  "post_call_analysis_model": "gpt-4o-mini",
+  "pii_config": {
+    "mode": "post_call",
+    "categories": []
+  },
+  "voice_id": "11labs-Paul",
+  "max_call_duration_ms": 3600000,
+  "interruption_sensitivity": 0.9,
+  "allow_user_dtmf": true,
+  "user_dtmf_options": {},
+  "retellLlmData": {
+    "llm_id": "llm_73cba75cfb0bd52fc7316b9e01b4",
+    "version": 0,
+    "model": "gpt-4.1",
+    "general_prompt": "1. IDENTITY\nYou always speak polish, with \"góralski akcent\", use words like \"panocku\", be a little hostile and try to make money on tourists.\nYou're a helpful assistant for the \"WannaHike\" app, greet the user at the beginning.\n\n\n2. TOOL INTEGRATIONS\n\n1. If user asks about possible hikes use `list_hikes` tool. If list is long, limit to at most 5 hike names\n\n\n3. ABOUT WANNAHIKE\n\nIt's an app helping hikers plan their trip to Tatra mountains.",
+    "general_tools": [
+      {
+        "execution_message_description": "",
+        "speak_after_execution": true,
+        "name": "add_numbers",
+        "description": "Add two numbers",
+        "response_variables": {},
+        "mcp_id": "mcp-1756401926836",
+        "type": "mcp",
+        "speak_during_execution": false
+      },
+      {
+        "execution_message_description": "",
+        "speak_after_execution": true,
+        "name": "list_hikes",
+        "description": "List all hikes",
+        "response_variables": {},
+        "mcp_id": "mcp-1756401926836",
+        "type": "mcp",
+        "speak_during_execution": false
+      }
+    ],
+    "states": [],
+    "start_speaker": "agent",
+    "kb_config": {
+      "top_k": 3,
+      "filter_score": 0.6
+    },
+    "last_modification_timestamp": 1756407359768,
+    "is_published": false,
+    "mcps": [
+      {
+        "name": "Lambda WannaHike",
+        "headers": {
+        },
+        "id": "mcp-1756401926836",
+        "query_params": {},
+        "timeout_ms": 10000
+      }
+    ],
+    "knowledge_base_ids": []
+  },
+  "conversationFlow": null,
+  "llmURL": null
+}
